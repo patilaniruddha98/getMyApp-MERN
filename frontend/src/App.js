@@ -17,6 +17,9 @@ import PrivateRouter from "./components/PrivateRoute";
 import AdminUserListScreen from "./screens/AdminUserListScreen";
 import AdminProductListScreen from "./screens/AdminProductListScreen"
 import AdminOrderListScreen from "./screens/AdminOrderListScreen";
+import AdminMainPage from "./screens/AdminMainPage";
+import ProductEditPage from "./screens/ProductEditPage";
+
 
 
 const App = () => {
@@ -62,7 +65,7 @@ const App = () => {
                 </li>
 
                 <li>
-                  <Link to="/profile">User Profile</Link> 
+                  <Link to="/profile"> User Profile</Link> 
                 </li>
 
               </ul>
@@ -74,7 +77,7 @@ const App = () => {
               <div className="dropdown">
                 <Link to="#admin">Admin <i className="fa fa-caret-down"></i></Link>
                 <ul className="dropdown-content">
-                  <li><Link to="/dashboard">Dashboard</Link></li>
+                  <li><Link to="/adminpage">Main Page</Link></li>
                   <li><Link to="/productlist">Product</Link></li>
                   <li><Link to="/orderlist">Orders</Link></li>
                   <li><Link to="/userlist">Users</Link></li>
@@ -104,6 +107,8 @@ const App = () => {
         <Route path="/userlist" component={AdminUserListScreen}></Route>
         <Route path="/productlist" component={AdminProductListScreen}></Route>
         <Route path="/orderlist" component={AdminOrderListScreen}></Route>
+        <Route exact path="/adminpage" component={AdminMainPage}></Route>
+        <Route path="/adminpage/editproduct/:id" component={ProductEditPage}></Route>
         <Route exact path="/" component={HomeScreen}></Route>
         
 

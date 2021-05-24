@@ -9,11 +9,10 @@ const orderSchema = new mongoose.Schema({
         product: {
             type: mongoose.Schema.Types.ObjectId,
             ref: "Product",
-            required: true
+            required: false
         }
     }
     ],
-
     shippingAddress: {
         fullName: { type: String, required: true },
         address: { type: String, required: true },
@@ -21,9 +20,7 @@ const orderSchema = new mongoose.Schema({
         postalCode: { type: Number, required: true },
         country: { type: String, required: true },
     },
-
     paymentMethod:{type:String, required:true},
-
     paymentResult:{
         id:String,
         status:String,
@@ -31,8 +28,6 @@ const orderSchema = new mongoose.Schema({
         email_address:String
 
     },
-
-
     itemsPrice:{type:Number , required:true},
     shippingPrice:{type:Number , required:true},
     taxPrice:{type:Number , required:true},
@@ -40,15 +35,12 @@ const orderSchema = new mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
-        required: true
+        required: false
     },
     isPaid:{type:Boolean,default:false},
     paidAt:{type:Date},
     isDelivered:{type:Boolean,default:false},
     deliveredAt:{type:Date}
-
-
-
 },{
     timestamps:true
 })

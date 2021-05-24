@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 import LoadingBox from "../components/LoadingBox"
 import MessageBox from "../components/MessageBox"
 import {listProduct} from "../actions/productActions"
+import { Link } from "react-router-dom"
 
 
 
@@ -29,7 +30,7 @@ const AdminUserListScreen=()=>{
         (
             <table className="table">
             <thead>
-                <th>User Id</th>
+                <th>Product Id</th>
                 <th>Name</th>
                 <th>Image</th>
                 <th>Price</th>
@@ -44,6 +45,7 @@ const AdminUserListScreen=()=>{
             <tbody>
                {product.map((product)=>(
                    <tr key={product._id}>
+                        <td><Link to={`/product/${product._id}`}>{product._id}</Link></td>
                        <td>{product.name}</td>
                        <td>{product.image}</td>
                        <td>{product.price}</td>

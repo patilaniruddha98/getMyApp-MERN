@@ -13,7 +13,7 @@ const OrderScreen = (props) => {
 
     const orderId=props.match.params.id
 
-    const [sdkReady,setSdkReady]=useState(false)
+    const [sdkReady,setSdkReady]=useState(false) 
 
     const orderDetails=useSelector(state=>state.orderDetails)
     const {order,loading,error}=orderDetails
@@ -31,7 +31,7 @@ const OrderScreen = (props) => {
             script.src=`https://www.paypal.com/sdk/js?client-id=${data}`
             script.async=true;
             script.onload=()=>{
-                setSdkReady(true)
+                setSdkReady(true)   
             }
             document.body.appendChild(script)
         }

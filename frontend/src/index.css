@@ -79,6 +79,10 @@ button{
   background-color:#f8f8f8 ;
   cursor:pointer
 }
+.b1{
+  margin-top: 10px;
+ 
+}
 input:hover,
 select:hover,
 textarea:hover,
@@ -90,6 +94,8 @@ button.primary{
 }
 button.block{
   width: 100%;
+  background-color: #404040;
+  color: #e4e4e4;
 }
 
 button.small{

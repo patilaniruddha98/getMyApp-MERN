@@ -91,7 +91,7 @@ const RegistrationScreen=(props)=>{
 
             <div>
                 <lable/>
-                <button className="primary" type="submit">Register</button>
+                <button className="block" type="submit">Register</button>
             </div>
             <div>
                 <lable/>

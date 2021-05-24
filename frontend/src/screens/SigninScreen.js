@@ -63,7 +63,7 @@ const SiginScreen=(props)=>{
 
             <div>
                 <lable/>
-                <button className="primary" type="submit">Sign In</button>
+                <button className="block" type="submit">Sign In</button>
             </div>
             <div>
                 <lable/>

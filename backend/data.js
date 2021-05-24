@@ -12,7 +12,7 @@ const data={
             rating:4,
             brand:'Fikt',
             numReviews:10,
-            description:"Material:Super fine polyester crepe fabric"
+            description:"Material Super fine polyester crepe fabric"
         },
         {
             
