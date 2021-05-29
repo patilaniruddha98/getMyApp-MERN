@@ -300,3 +300,25 @@ img.large{
 .table thead th{
   text-align: center;
 }
+.searchdiv{
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
+
+}
+.search{
+  margin-left: 25%;
+  width: 50%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  font-size: 19px;
+  padding: 5px;
+  padding-left :20px; ;
+  color:gray;
+  box-shadow: -10px -10px 15px #edeff1, 10px 10px 15px #cacfd8;
+  transition: .5s;
+}

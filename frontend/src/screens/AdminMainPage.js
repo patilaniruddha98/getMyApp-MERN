@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { deleteProduct, detailsProduct, listProduct } from "../actions/productActions";
@@ -39,14 +39,33 @@ const AdminMainPage=(props)=>{
 
     }
     
+    const [search,setSearch]=useState('')
+    const product1=useMemo(()=>{
+      if(!search)
+        return product
+  
+      return product.filter(pro=>{
+        return pro.name.toLowerCase().includes(search.toLowerCase())
+      })
+  
+    },[product, search])
+  
+  
+    
+  
   
     return (
+    
       <div>
+      <div className="searchdiv">
+     <input type="text" placeholder="Search" className="search" value={search} onChange={e=>setSearch(e.target.value)}/>
+    
+     </div>
   
         {loading ? <LoadingBox></LoadingBox> : error ? <MessageBox varient="danger">{error}</MessageBox> :
           <div className="row center">
             {
-              product.map((product) => (
+              product1.map((product) => (
                 <div key={product._id} className="card">
         <Link to={`/product/${product._id}`}>
             <img className="medium" src={product.image} alt={product.name}/>

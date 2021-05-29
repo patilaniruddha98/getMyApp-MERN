@@ -5,7 +5,7 @@ import Rating from "./Rating"
 const Product=(props)=>{
     const {product}=props
     return(
-        
+    
         <div key={product._id} className="card">
         <Link to={`/product/${product._id}`}>
             <img className="medium" src={product.image} alt={product.name}/>
@@ -18,6 +18,7 @@ const Product=(props)=>{
         <div className="price">Rs. {product.price}</div>
      </div>
     </div>
+ 
     )
 }
 export default Product
