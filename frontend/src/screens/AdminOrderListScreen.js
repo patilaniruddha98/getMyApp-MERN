@@ -26,16 +26,13 @@ const AdminOrderListScreen = () => {
                         <table className="table">
                             <thead>
                                 <th>Order Id</th>
-                                <th>isPaid</th>
-                                <th>isDelivered</th>
                                 <th>Items</th>
                                 <th>User Id</th>
                                 <th>Payment Method</th>
                                 <th>Item Price</th>
                                 <th>Tax Price</th>
                                 <th>Shipping Price</th>
-                                <th>Total Price</th>
-                                
+                                <th>Total Price</th>  
                                 <th>Created At</th>
                                 <th>Updated At</th>
                             </thead>
@@ -46,12 +43,10 @@ const AdminOrderListScreen = () => {
                                         
                                         <tr key={orders._id}>
                                             <td>{orders._id}</td>
-                                            <td>{orders.isPaid}</td>
-                                            <td>{orders.isDelivered}</td>
                                             <td>{orders.orderItems.map((orderItems)=>(<>{orderItems._id}<br/></>))}</td>
                                             <td>{orders.user}</td>
                                             <td>{orders.paymentMethod}</td>
-                                            <td>{orders.itemPrice}</td>
+                                            <td>{orders.itemsPrice}</td>
                                             <td>{orders.taxPrice}</td>
                                             <td>{orders.shippingPrice}</td>
                                             <td>{orders.totalPrice}</td>

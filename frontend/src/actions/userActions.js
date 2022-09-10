@@ -7,12 +7,14 @@ export const userSignin=(email,password)=>async(dispatch)=>{
     })
     try{
         const {data}=await Axios.post("/api/user/signin",{email,password})
+      
         dispatch({
             type:USER_SIGNIN_SUCCESS,
             payload:data
         })
 
         localStorage.setItem("userInfo",JSON.stringify(data))
+        
 
     }catch(error){
         dispatch({

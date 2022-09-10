@@ -9,7 +9,6 @@ const AdminUserListScreen=(props)=>{
     const userList=useSelector(state=>state.userList)
     const {loading,users,error}=userList
 
-    
     const dispatch=useDispatch()
     useEffect(()=>{
         dispatch(listUsers())
